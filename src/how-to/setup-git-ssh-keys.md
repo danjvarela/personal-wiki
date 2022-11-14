@@ -27,4 +27,3 @@ See [connecting-to-github-with-ssh](https://docs.github.com/en/authentication/co
     ```sh
     gh ssh-key add ~/.ssh/id_ed25519.pub --title "<insert optional title>"
     ```
-

@@ -1,4 +1,4 @@
-# Installation
+# Setup my dotfiles
 
 ## Requirements
 Make sure to have [Homebrew](https://brew.sh/), [yadm](https://yadm.io/), and [oh-my-zsh](https://ohmyz.sh/) installed. If not, then this simple script will install them:
