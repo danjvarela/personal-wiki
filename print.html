@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dan&#x27;s personal wiki
+</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">How to</li><li class="chapter-item expanded "><a href="how-to/setup-my-dotfiles.html"><strong aria-hidden="true">1.</strong> Setup my dotfiles</a></li><li class="chapter-item expanded "><a href="how-to/setup-git-ssh-keys.html"><strong aria-hidden="true">2.</strong> Setup git ssh-keys</a></li><li class="chapter-item expanded "><a href="how-to/completely-uninstall-homebrew.html"><strong aria-hidden="true">3.</strong> Completely uninstall Homebrew</a></li><li class="chapter-item expanded "><a href="how-to/uninstall-formulas-casks-by-homebrew.html"><strong aria-hidden="true">4.</strong> Uninstall all formulas/casks installed by homebrew</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Dan&#x27;s personal wiki
+</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>This is a compilation of notes/guides/links to help me setup the tools I need in programming. This also details some solutions and workarounds to problems I encountered.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup-my-dotfiles"><a class="header" href="#setup-my-dotfiles">Setup my dotfiles</a></h1>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<p>Make sure to have <a href="https://brew.sh/">Homebrew</a>, <a href="https://yadm.io/">yadm</a>, and <a href="https://ohmyz.sh/">oh-my-zsh</a> installed. If not, then this simple script will install them:</p>
+<pre><code class="language-sh">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/danjvarela/dotfiles/master/.config/yadm/install.sh)&quot;
+</code></pre>
+<h2 id="using-yadm"><a class="header" href="#using-yadm">Using yadm</a></h2>
+<p>Clone the dotfiles repo using <strong>yadm</strong>, type <code>y</code> if asked to execute the bootstrap script.</p>
+<pre><code class="language-sh">yadm clone https://github.com/danjvarela/dotfiles.git
+</code></pre>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next steps</a></h2>
+<ul>
+<li><a href="how-to/../how-to/setup-git-ssh-keys.html">Setup git ssh-keys</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup-git-ssh-keys"><a class="header" href="#setup-git-ssh-keys">Setup git ssh-keys</a></h1>
+<p>See <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">connecting-to-github-with-ssh</a> for more details.</p>
+<ol>
+<li>Generate a new key:
+<pre><code class="language-sh">ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+</code></pre>
+</li>
+<li>Start ssh-agent in the background
+<pre><code class="language-sh">eval &quot;$(ssh-agent -s)&quot;
+</code></pre>
+</li>
+<li>Edit <code>~/.ssh/config</code> and add the following
+<pre><code class="language-sh">Host *.github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+</code></pre>
+</li>
+<li>Add the key to the ssh-agent 
+<pre><code class="language-sh">ssh-add ~/.ssh/id_ed25519
+</code></pre>
+</li>
+<li>Login to github
+<pre><code class="language-sh">gh auth login
+</code></pre>
+</li>
+<li>Add the key to github
+<pre><code class="language-sh">gh ssh-key add ~/.ssh/id_ed25519.pub --title &quot;&lt;insert optional title&gt;&quot;
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="completely-uninstall-homebrew"><a class="header" href="#completely-uninstall-homebrew">Completely uninstall Homebrew</a></h1>
+<p>Source <a href="https://github.com/homebrew/install#uninstall-homebrew">here</a>.</p>
+<pre><code class="language-sh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)&quot;
+</code></pre>
+<h2 id="related"><a class="header" href="#related">Related</a></h2>
+<ul>
+<li><a href="how-to/./uninstall-formulas-casks-by-homebrew.html">Uninstall all packages/casks installed by homebrew</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uninstall-all-formulascasks-installed-by-homebrew"><a class="header" href="#uninstall-all-formulascasks-installed-by-homebrew">Uninstall all formulas/casks installed by homebrew</a></h1>
+<h2 id="uninstall-all-formulas"><a class="header" href="#uninstall-all-formulas">Uninstall all formulas</a></h2>
+<pre><code class="language-sh">brew remove --force $(brew list --formula)
+</code></pre>
+<h2 id="uninstall-all-casks"><a class="header" href="#uninstall-all-casks">Uninstall all casks</a></h2>
+<pre><code class="language-sh">brew remove --cask --force $(brew list)
+</code></pre>
+<h2 id="cleanup"><a class="header" href="#cleanup">Cleanup</a></h2>
+<pre><code class="language-sh">brew autoremove &amp;&amp; brew cleanup --prune=all
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
